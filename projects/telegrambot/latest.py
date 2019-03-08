@@ -2,7 +2,7 @@ from twisted.internet import task, reactor
 import requests
 import json
 
-timeout = 180.0 # Sixty seconds
+timeout = 14400.0 # Sixty seconds
 token = "552545969:AAHmuCZ8fdjggXtCcOmnLinv1Utfa_N_cEc"
 array_size = 0
 
@@ -39,8 +39,8 @@ def eight_hour_msg():
         send(ldata)
         pass
 
-l = task.LoopingCall(message_picker)
-l.start(timeout) # call every sixty seconds
+# l = task.LoopingCall(message_picker)
+# l.start(timeout) # call every sixty seconds
 
 lnewtask = task.LoopingCall(eight_hour_msg)
 lnewtask.start(28800)
