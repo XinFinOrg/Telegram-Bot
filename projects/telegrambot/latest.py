@@ -7,8 +7,8 @@ token = "552545969:AAHmuCZ8fdjggXtCcOmnLinv1Utfa_N_cEc"
 array_size = 0
 
 def send(text):
-    params = {'chat_id': '@testingbotxinfin', 'text': text,"parse_mode":"HTML"}
-    sresp = requests.post('https://api.telegram.org/bot609512942:AAHCXKBKWEAhSuMpRWTW7qPne3kIiXJZ-Zo/sendMessage', params)
+    params = {'chat_id': '@xinfintalk', 'text': text,"parse_mode":"HTML"}
+    sresp = requests.post('https://api.telegram.org/bot552545969:AAHmuCZ8fdjggXtCcOmnLinv1Utfa_N_cEc/sendMessage', params)
 
 def message_picker():
     with open('messages.json') as json_file:
