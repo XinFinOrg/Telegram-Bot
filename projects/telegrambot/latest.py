@@ -43,6 +43,6 @@ def eight_hour_msg():
 # l.start(timeout) # call every sixty seconds
 
 lnewtask = task.LoopingCall(eight_hour_msg)
-lnewtask.start(28800)
+lnewtask.start(43200)
 
 reactor.run()
