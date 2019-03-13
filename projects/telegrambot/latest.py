@@ -2,7 +2,7 @@ from twisted.internet import task, reactor
 import requests
 import json
 
-timeout = 14400.0 # Sixty seconds
+timeout = 21600.0 # Sixty seconds
 token = "552545969:AAHmuCZ8fdjggXtCcOmnLinv1Utfa_N_cEc"
 array_size = 0
 
