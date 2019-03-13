@@ -15,7 +15,6 @@ def message_picker():
         lMessages = json.load(json_file)
         ldata =lMessages["Messages"]
         length =len(ldata)
-        print (ldata[array_size])
         global array_size
 
         if(array_size< length):
@@ -24,7 +23,7 @@ def message_picker():
 
         else:
             send(ldata[0])
-            array_size +=1
+            array_size =0
 
         # sresp = requests.post('https://api.telegram.org/bot609512942:AAHCXKBKWEAhSuMpRWTW7qPne3kIiXJZ-Zo/sendMessage', params)
         pass
@@ -39,8 +38,8 @@ def eight_hour_msg():
         send(ldata)
         pass
 
-# l = task.LoopingCall(message_picker)
-# l.start(timeout) # call every sixty seconds
+l = task.LoopingCall(message_picker)
+l.start(timeout) # call every sixty seconds
 
 lnewtask = task.LoopingCall(eight_hour_msg)
 lnewtask.start(43200)
